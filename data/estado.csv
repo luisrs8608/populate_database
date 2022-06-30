@@ -1,4 +1,4 @@
-"id","nombre","pais_id","REFRESH_DATE"
+"id","name","country_id","REFRESH_DATE"
 1,Barbuda,1,2022-06-03 14:47:19.255
 2,Redonda,1,2022-06-03 14:47:19.255
 3,Saint George Parish,1,2022-06-03 14:47:19.255

@@ -11,6 +11,7 @@ def populate_table(conn, cr, data_record):
         csv_file = csv.DictReader(file)
         data_list = []
         values = []
+        placeholders = ','.join(['%s' for i in range(len(fields))])
         for row in csv_file:
             items = []
             for field in fields:
@@ -19,7 +20,6 @@ def populate_table(conn, cr, data_record):
                 elif field[1] == 'char':
                     value = row[field[0]]
                 items.append(value)
-            placeholders = ','.join(['%s' for i in range(len(items))])
             values.append('({0})'.format(placeholders))
             data_list.extend(items)
         query += ', '.join(str(data) for data in values)

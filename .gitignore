@@ -1,3 +1,4 @@
 launch.json
 __pycache__
 database.ini
+scripts.sql
